@@ -1,0 +1,6 @@
+C:\Users\anu.virtanen\ot_harjoitustyo>tree
+Folder PATH listing for volume Windows
+Volume serial number is F0FE-E974
+C:.
+└───laskarit
+    └───viikko1

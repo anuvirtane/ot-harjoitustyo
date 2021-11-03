@@ -1,0 +1,85 @@
+$ git log --stat | cat
+commit f6a76378dbdd902f7ad886d26b55afebe7ef97ae
+Author: Anu Virtanen <anu.virtanen@gofore.com>
+Date:   Wed Nov 3 10:01:47 2021 +0200
+
+    lisää tiedostoja/
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 75c6a2c7db88bbcdd9b47f96c45a15b7c9466e49
+Author: Anu Virtanen <anu.virtanen@gofore.com>
+Date:   Wed Nov 3 09:56:17 2021 +0200
+
+    remove eka.txt.txt
+
+ eka.txt.txt | 10 ----------
+ 1 file changed, 10 deletions(-)
+
+commit 877042355d51ea97a418c16a9150a6f0fcba894f
+Author: Anu Virtanen <anu.virtanen@gofore.com>
+Date:   Wed Nov 3 09:55:39 2021 +0200
+
+    rename eka.txt
+
+ eka.txt | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+commit f135cdb4ae9ae8cba5e8121db02563ef01fe2677
+Author: Anu Virtanen <anu.virtanen@gofore.com>
+Date:   Wed Nov 3 09:53:56 2021 +0200
+
+    muuta tiedostojen eka.txt ja kolmas.txt sisältöä
+
+ eka.txt.txt | 10 ++++++++++
+ kolmas.txt  | 10 ++++++++++
+ 2 files changed, 20 insertions(+)
+
+commit 199406318be58659477abd108b1e2b1ce3fcfd2e
+Author: Anu Virtanen <anu.virtanen@gofore.com>
+Date:   Wed Nov 3 09:49:59 2021 +0200
+
+    uudelleennimeä tiedosto.txt eka.txt:ksi
+
+ tiedosto.txt | 20 --------------------
+ 1 file changed, 20 deletions(-)
+
+commit 2a69ca652b6e032f64716ef562c3da4db094b1a2
+Author: Anu Virtanen <anu.virtanen@gofore.com>
+Date:   Wed Nov 3 09:48:19 2021 +0200
+
+    poista toinen.txt
+
+ toinen.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 0cd039a9360447e68348ac210d1f88655cfc12fc
+Author: Anu Virtanen <anu.virtanen@gofore.com>
+Date:   Wed Nov 3 09:46:00 2021 +0200
+
+    lisää tekstiä tiedosto.txt
+
+ tiedosto.txt | 21 ++++++++++++++++++++-
+ 1 file changed, 20 insertions(+), 1 deletion(-)
+
+commit a3c355decebc4648432700a2fd12560c5ae0043a
+Author: Anu Virtanen <anu.virtanen@gofore.com>
+Date:   Wed Nov 3 09:42:32 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 990d055e255e81af247a044cc50d7c60a660f3fa
+Author: Anu Virtanen <anu.virtanen@gofore.com>
+Date:   Wed Nov 3 09:40:14 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
