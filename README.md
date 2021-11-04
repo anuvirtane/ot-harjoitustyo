@@ -1,6 +1,6 @@
 # Harjoitustyö
 
-[HY:N Ohjelmistotekniikka-kurssin](https://ohjelmistotekniikka-hy.github.io/) **harjoitustyö** *tulee tänne*.
+[HY:n Ohjelmistotekniikka-kurssin](https://ohjelmistotekniikka-hy.github.io/) **harjoitustyö** *tulee tänne*.
 
 [Harjoitustyön työaikakirjanpito](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/tuntikirjanpito.txt)
 
