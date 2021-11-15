@@ -1,2 +1,3 @@
 Harjoitustyön tunnit:
-3.11.21 1 h
+3.11.21 1  (kirjoitin alkuperäisen ohjelmaidean ja kirjoitin sen vaatimukset)
+15.11.21 1 h (keksin uuden, oikeasti hyödyllisen ohjelmaidean ja muutin idean)

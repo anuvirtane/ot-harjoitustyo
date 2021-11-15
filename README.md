@@ -10,4 +10,4 @@
 [komentorivi.txt](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
 
 ## Viikko 2
-Tulossa
+[Viikon 2 laskarit](https://github.com/anuvirtane/ot-harjoitustyo/tree/main/laskarit/viikko2)
