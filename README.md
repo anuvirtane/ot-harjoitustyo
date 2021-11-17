@@ -1,13 +1,40 @@
-# Harjoitustyö
+# Ruokatilauksen laskija 
 
-[HY:n Ohjelmistotekniikka-kurssin](https://ohjelmistotekniikka-hy.github.io/) **harjoitustyö** *tulee tänne*.
+Tämä sovellus auttaa säätämään ruokatilauksen määrät kymmenille ihmisille, jotka asuvat n. 11 päivää meditaatiokurssilla. Ohjelma lukee reseptit tekstitiedostosta, etsii relevanteista resepteistä ruokamäärät ja säätää ne annetulle ihmismäärälle. Laskemansa ruokamäärät ohjelma tallentaa neljään eri tiedostoon, koska ruoka-aineet tilataan kolmesta eri paikasta kahtena eri toimitusajankohtana (käytännön syistä ja taloudellisista syistä).
 
-[Harjoitustyön työaikakirjanpito](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/tuntikirjanpito.txt)
+Tämä ohjelma sekä vastaa tosielämän automaatiotarpeeseen että toimii [HY:n Ohjelmistotekniikka-kurssin](https://ohjelmistotekniikka-hy.github.io/) harjoitustyönä. 
 
-## Viikko 1
-[gitlog.txt](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/laskarit/viikko1/gitlog.txt)
+## Huomio Python-versiosta
 
-[komentorivi.txt](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
+Tämä sovellus on tehty ja testattu pythonin versiolla ``3.8``.
 
-## Viikko 2
-[Viikon 2 laskarit](https://github.com/anuvirtane/ot-harjoitustyo/tree/main/laskarit/viikko2)
+## Dokumentaatio
+
+-[Vaatimusmäärittely](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/requirements.md)
+
+-[Harjoitustyön työaikakirjanpito](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/tuntikirjanpito.txt)
+
+## Asennus
+
+Asenna riippuvuudet komennolla:
+
+``poetry install``
+
+
+
+## Komentorivitoiminnot
+
+Suorita ohjelma komennolla:
+
+``poetry run invoke start``
+
+Suorita yksikkötestit komennolla:
+
+`` poetry run invoke test``
+
+Generoi testikattavuusraportti komennolla:
+
+``poetry run invoke coverage-report``
+
+Raportti generoituu _htmlcov_-hakemistoon.
+
