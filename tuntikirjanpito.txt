@@ -1,6 +1,9 @@
 Harjoitustyön tunnit:
-3.11.21 1  (kirjoitin alkuperäisen ohjelmaidean ja kirjoitin sen vaatimukset)
-15.11.21 1 h (keksin uuden, oikeasti hyödyllisen ohjelmaidean ja muutin idean)
+3.11.21 1  kirjoitin alkuperäisen ohjelmaidean ja kirjoitin sen vaatimukset
+15.11.21 1 h keksin uuden, oikeasti hyödyllisen ohjelmaidean ja muutin idean
 17.11.21 1 h päivitin readmen, alustin poetryn
-18.11.21 2 h kokeilin tkinteriä (ei tee vielä mitään mutta avaa ikkunan), 
+18.11.21 2,5 h kokeilin tkinteriä (ei tee vielä mitään mutta avaa ikkunan), 
                 tallensin yhden luettavan reseptitiedoston, kokeilin sen lukemista eri dokumenttiformaateissa. Päädyin .txt
+                git push ei toiminut enää ja googlasin vimmatusti. lisäsin push-komentoon access tokenin repon osoitteen väliin ja pushas.
+20.11.21 1 h selvittelyä, miten reseptien epäjohdonmukaisuuksiin kannattaa suhtautua. Reseptin lukeminen ja sieltä ainesosien eristäminen.
+21.11.21 3 h reseptin ainesosien jakamista järkevästi niiden lukemisen jälkeen

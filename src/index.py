@@ -1,4 +1,5 @@
 from tkinter import Tk, Button, Label, Entry
+from recipereader.recipereader import RecipeReader
 
 
 def main():
@@ -14,9 +15,10 @@ def main():
     # window.geometry("300x200+10+10")
    
     # window.mainloop()
-    with open("files/Day0.txt", "r") as file1:
-        teksti = file1.read()
-        print(teksti)
+
+    recipereader = RecipeReader()
+    recipereader.read()
+
 
 
 if __name__ == '__main__':
