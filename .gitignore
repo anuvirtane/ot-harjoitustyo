@@ -10,3 +10,7 @@ htmlcov
 __pycache__
 *.py[cod]
 *$py.class
+
+#mun repossa ei ole nähdäkseni tällaisia macos-hakemistoja, enkä tiedä, 
+#miksi olisi, mutta labtoolin palautteessa pyydettiin lisäämään tämä gitignoreen, joten lisäsin
+/macos

@@ -10,9 +10,9 @@ Tämä sovellus on tehty ja testattu pythonin versiolla ``3.8``.
 
 ## Dokumentaatio
 
--[Vaatimusmäärittely](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/requirements.md)
+-[Vaatimusmäärittely](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/dokumentaatio/requirements.md)
 
--[Harjoitustyön työaikakirjanpito](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/tuntikirjanpito.txt)
+-[Harjoitustyön työaikakirjanpito](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.txt)
 
 ## Asennus
 

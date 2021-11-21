@@ -6,4 +6,4 @@ Harjoitustyön tunnit:
                 tallensin yhden luettavan reseptitiedoston, kokeilin sen lukemista eri dokumenttiformaateissa. Päädyin .txt
                 git push ei toiminut enää ja googlasin vimmatusti. lisäsin push-komentoon access tokenin repon osoitteen väliin ja pushas.
 20.11.21 1 h selvittelyä, miten reseptien epäjohdonmukaisuuksiin kannattaa suhtautua. Reseptin lukeminen ja sieltä ainesosien eristäminen.
-21.11.21 3 h reseptin ainesosien jakamista järkevästi niiden lukemisen jälkeen
+21.11.21 4 h reseptin ainesosien jakamista järkevästi niiden lukemisen jälkeen, 1 yksikkötesti, viikon 2 palautteen noudattaminen

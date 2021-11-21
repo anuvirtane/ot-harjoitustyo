@@ -38,24 +38,30 @@ Graphical user interface with functions to:
 
 ## Functionality in basic version
 
-### "Minimum viable product"
+### "Minimum viable product:"
 
-<!-- - user can add songs
-- user can see songs listed
-- user can see dates for song plays
-- user can remove songs
-- user can add date when song was played -->
 
-- user can give a file with recipes and amount of people attending the course, and get four files with food order amounts
+ **user can give a file/files with recipes and amount of people attending the course, and get four files with food order amounts**
 
-<!-- ### "Minimum viable product option 2"
-- user can add songs
-    - user can add song lyrics
-    - user can see song lyrics
-    - user can add song structures
-    - user can see song structures  
-- user can see songs listed
-- user can remove songs -->
+ - program (class RecipeReader) *done during week 3* 
+    - reads file/files with recipes
+    - finds the part of recipe where ingredients are
+    - saves what amount of people ingredients are given for in dict (usually 10, 90, 100 and 110 people) so that dict keys are people amounts
+    - saves ingredient names in a list (in the order in which they appear in recipe)
+    - saves ingredient amounts in lists that are saved as dict values so that the value for dict key "10 eaters" is a list of ingredient amounts
+    - ingredient name is in the same list index place as ingredient amount in each dict
+
+
+- program (class IngredientAnalyser) *planned for week 4*
+
+    - gets dict with ingredient amounts and list with ingredient names when initiated
+    - checks ingredient units and converts them if necessary (eg. l to kg)
+    - saves amounts to a list with dicts in it. Dict has key: ingredient and value: amount
+
+- program (class OrderGenerator)
+    - gets list with dicts {ingredient: amount} in it when initiated
+    - knows which ingredient goes to which order file and puts them there
+
 
 ### What would be really nice to have as well
 
