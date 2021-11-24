@@ -2,32 +2,19 @@
 
 ## Use of this application
 
-<!-- Using this application enables one to keep track of when a certain song has last been played at band practice. Also saving song lyrics and song structures can be saved in Song Memory. -->
  
-This application has been planned and implemented to help one make food orders for a 10 day meditation courses. The program reads a text file (Word or such) with recipes for 11 days (11 days because on the evening of arrival a meal is also served). Based on how many people will be attending the course, it calculates the food amounts needed and saves them in four separate files (.txt) for food ordering. There needs to be four separate files because there are two times the wholesaler delivers food for the course and some of the food products are purchased prior to the course from two different locations (for saving purposes). If there are dry food product leftovers from the previous course, they can be given to the program in a text file. The program will read the file and subtract the amounts from the food order.
+This application has been planned and implemented to help one make food orders for 10 day meditation courses. The program reads a text file (.txt) with recipes for 11 days (11 days because on the evening of arrival a meal is also served). Based on how many people will be attending the course, it calculates the food amounts needed and saves them in four separate files (.txt) for food ordering. There needs to be four separate files because there are two times the wholesaler delivers food for the course and some of the food products are purchased prior to the course from two different locations (for saving purposes). If there are dry food product leftovers from the previous course, they can be given to the program in a text file. The program will read the file and subtract the amounts from the food order.
 
 ## Users
 
 There is only one user role for the application. 
 
 
-
 ## User interface
 
-<!-- Song Memory user interface hierarchy of views:
+At early phases: a text based user interface.
 
-- choose function -view which lists different functionalities:
-    - add song -view
-    - choose song -view which lists saved songs, under which there are options:
-        - see song lyrics
-            - edit song lyrics
-        - see song structure
-            - edit song structure
-        - remove song
-        - see when song has been played
-    - list dates for last played songs -->
-
-Graphical user interface with functions to:
+Graphical user interface will be added later and will include functions to:
 
 - give location of text file with recipes to be read
 - give amount of people on the course to calculate food amounts
@@ -56,7 +43,7 @@ Graphical user interface with functions to:
 
     - gets dict with ingredient amounts and list with ingredient names when initiated
     - checks ingredient units and converts them if necessary (eg. l to kg)
-    - saves amounts to a list with dicts in it. Dict has key: ingredient and value: amount
+    - saves amounts to a list with dicts in it. Dict format: {"ingredient": ingredient, "amount": amount, "unit": unit}
 
 - program (class OrderGenerator)
     - gets list with dicts {ingredient: amount} in it when initiated
@@ -78,9 +65,4 @@ When basic version has been implemented, further functionalities can be added
 - the program makes the recipes file "look nice" and easy to read when amounts are adjusted
 - user is not bound to having four food order files but can decide how many food order files and what ingredients go to which file
 
-<!-- - rating songs, adding importance for song to be played
-- adding a field for additional info about song
-- deleting all info in app
-- login functionality, chance to add multiple users
-- user teams where everyone can see and edit song info
-- chance to create multiple Song Memory lists  -->
+

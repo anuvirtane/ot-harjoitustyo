@@ -1,4 +1,5 @@
 from tkinter import Tk, Button, Label, Entry
+from ingredientanalyser.ingredientanalyser import IngredientAnalyser
 from recipereader.recipereader import RecipeReader
 
 
@@ -15,10 +16,11 @@ def main():
     # window.geometry("300x200+10+10")
    
     # window.mainloop()
-
-    recipereader = RecipeReader()
-    recipereader.read()
-
+    # recipereader = RecipeReader("files/Day0.txt")
+    # recipereader.read()
+    ingredientanalyser = IngredientAnalyser()
+    ingredientanalyser.save_ingredients("files/Day0.txt")
+#     ingredientanalyser.save_ingredients("files/Day1.txt")
 
 
 if __name__ == '__main__':

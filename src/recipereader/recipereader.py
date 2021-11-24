@@ -41,6 +41,12 @@ class RecipeReader():
                 print("amount:")
                 print(self.ingredients_dict[key][i])
 
+    def get_ingredients_names(self):
+        return self.ingredient_names
+
+    def get_ingredients_dict(self):
+        return self.ingredients_dict
+
 
     def save_ingredient_amounts_according_to_dict_keys(self):
         if self.check_amounts_are_even():
@@ -101,12 +107,14 @@ class RecipeReader():
                     ingredients_start_row = i
                     ingredients_start_row_found = True
                    # print(f"Starting from row {ingredients_start_row} ingredients will soon be listed")
+               # if rows[i + 1] == '' and rows[i + 2] == '' and ingredients_start_row_found and i > ingredients_start_row + 20:
                 if "preparations" in rows[i + 1].lower() and ingredients_start_row_found:
                     ingredients_end_row_found = True
                     ingredients_end_row = i
                     #print(f"Before row {i} are ingredients")
             if ingredients_start_row_found and ingredients_end_row_found:
                 self.ingredients = rows[ingredients_start_row:ingredients_end_row]
+                print(rows[ingredients_start_row:ingredients_end_row])
             else:
                 print("""The file given does not seem to contain recipes in a format
                 that this program can read. The program starts reading from 'Ingredients' and
@@ -115,8 +123,5 @@ class RecipeReader():
             print(f"Something went wrong in finding ingredients from recipe text: {exc}")
            
             
-
-
-
   
 
