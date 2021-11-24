@@ -30,7 +30,7 @@ Graphical user interface will be added later and will include functions to:
 
  **user can give a file/files with recipes and amount of people attending the course, and get four files with food order amounts**
 
- - program (class RecipeReader) *done during week 3* 
+ - program (class RecipeReader) *simple version done during week 3.* 
     - reads file/files with recipes
     - finds the part of recipe where ingredients are
     - saves what amount of people ingredients are given for in dict (usually 10, 90, 100 and 110 people) so that dict keys are people amounts
@@ -39,7 +39,7 @@ Graphical user interface will be added later and will include functions to:
     - ingredient name is in the same list index place as ingredient amount in each dict
 
 
-- program (class IngredientAnalyser) *planned for week 4*
+- program (class IngredientAnalyser) *simple version done during week 4.*
 
     - gets dict with ingredient amounts and list with ingredient names when initiated
     - checks ingredient units and converts them if necessary (eg. l to kg)

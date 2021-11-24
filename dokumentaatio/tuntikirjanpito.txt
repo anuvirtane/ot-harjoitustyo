@@ -8,4 +8,4 @@ Harjoitustyön tunnit:
 20.11.21 1 h selvittelyä, miten reseptien epäjohdonmukaisuuksiin kannattaa suhtautua. Reseptin lukeminen ja sieltä ainesosien eristäminen.
 21.11.21 4,5 h reseptin ainesosien jakamista järkevästi niiden lukemisen jälkeen, 1 yksikkötesti, viikon 2 palautteen noudattaminen
 yht 11 h (vk 1-3)
-24.11.21 4 h  lisäsin ingredientanalyserin. yritin muuttaa recipereaderia niin, että se osaisi lukea tiedoston, jossa on useampi resepti. ei onnistunut.
+24.11.21 4,5 h  lisäsin ingredientanalyserin. yritin muuttaa recipereaderia niin, että se osaisi lukea tiedoston, jossa on useampi resepti. ei onnistunut.
