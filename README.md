@@ -14,6 +14,8 @@ Tämä sovellus on tehty ja testattu pythonin versiolla ``3.8``.
 
 -[Harjoitustyön työaikakirjanpito](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.txt)
 
+-[Sovellusarkkitehtuuri](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
+
 ## Asennus
 
 Asenna riippuvuudet komennolla:

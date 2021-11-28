@@ -14,7 +14,7 @@ def main():
     # txtfld = Entry(window, text="Terveisesi eivät lähde mihinkään tästä", bd=5)
     # txtfld.place(x=80, y=150)
     # window.geometry("300x200+10+10")
-   
+
     # window.mainloop()
     # recipereader = RecipeReader("files/Day0.txt")
     # recipereader.read()
