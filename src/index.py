@@ -1,6 +1,7 @@
 from tkinter import Tk, Button, Label, Entry
 from ingredientanalyser.ingredientanalyser import IngredientAnalyser
 from recipereader.recipereader import RecipeReader
+from filesplitter.filesplitter import FileSplitter
 
 
 def main():
@@ -18,9 +19,13 @@ def main():
     # window.mainloop()
     # recipereader = RecipeReader("files/Day0.txt")
     # recipereader.read()
-    ingredientanalyser = IngredientAnalyser()
-    ingredientanalyser.save_ingredients("files/Day0.txt")
-#     ingredientanalyser.save_ingredients("files/Day1.txt")
+    fs = FileSplitter("files/Day1.txt")
+    fs.read()
+
+    #TÄSSÄ SE TOIMIVA ENNEN 2.12.
+    # ingredientanalyser = IngredientAnalyser()
+    # ingredientanalyser.save_ingredients("files/Day0.txt")
+
 
 
 if __name__ == '__main__':
