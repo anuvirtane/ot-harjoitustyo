@@ -30,11 +30,12 @@ class FileSplitter():
             
 
     def pick_rows_with_ingredients(self, list_to_check_for_ingredients: list):
-        rows = list_to_check_for_ingredients
+        rows: list [str] = list_to_check_for_ingredients
         try:
             i = 0
             ingredients_start_row_found = False
             ingredients_end_row_found = False
+            recipe_is_rice_recipe = False
             for i in range(len(rows)-1):
                 if rows[i - 1].lower() == "ingredients":
                     ingredients_start_row = i
@@ -48,7 +49,13 @@ class FileSplitter():
                     # print(f"Before row {i} are ingredients")
                     # print(rows[i])
                 if ingredients_start_row_found and ingredients_end_row_found:
-                    self.save_ingredients_lists(rows[ingredients_start_row:ingredients_end_row+1])
+                    for item in rows[ingredients_start_row:ingredients_end_row+1]:
+                        if item.lower() == "rice":
+                            recipe_is_rice_recipe = True
+                        if item.lower() == "\trice":
+                            recipe_is_rice_recipe = True
+                    if not recipe_is_rice_recipe:    
+                        self.append_to_ingredients_lists(rows[ingredients_start_row:ingredients_end_row+1])
                     
                     return rows[ingredients_end_row+1:]
                 #self.ingredients = rows[ingredients_start_row:ingredients_end_row]
@@ -65,7 +72,7 @@ class FileSplitter():
             print(
                 f"Something went wrong in finding ingredients from recipe text: {exc}")
 
-    def save_ingredients_lists(self, list_to_append: list):
+    def append_to_ingredients_lists(self, list_to_append: list):
         """Contains workaround for extra words having gone into ingredients due to xml format changing
         when .docx or .odt file has been saved as txt and rows having been formed in strange places at times"""
         if "instructions" in list_to_append:

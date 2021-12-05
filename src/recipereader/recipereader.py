@@ -26,23 +26,30 @@ class RecipeReader():
             print("Something went wrong in reading recipe file:", exc)
 
     def find_ingredients(self):
-        self.filesplitter.find_ingredients()
-        for list in self.filesplitter.ingredients_lists:
-            self.ingredients = list
-        #self.pick_rows_with_ingredients()
-            self.clean_ingredients_list()
-            self.create_ingredients_dict()
-            self.add_ingredients_to_dict()
+        try:
+            self.filesplitter.find_ingredients()
+            for list in self.filesplitter.ingredients_lists:
+                self.ingredients = list
+            #self.pick_rows_with_ingredients()
+                self.clean_ingredients_list()
+                self.create_ingredients_dict()
+                self.add_ingredients_to_dict()
+                
+        except Exception as exc:
+            print("Something went wrong in finding ingredients from recipe text:", exc)
 
     def add_ingredients_to_dict(self):
-        self.add_ingredients_names()
-        print(self.ingredients)
-        print(len(self.ingredients))
-        print(self.ingredient_names)
-        print(len(self.ingredient_names))
-        print(self.ingredients_dict)
-        self.save_ingredient_amounts_according_to_dict_keys()
-        self.print_what_is_there_now()
+        try:
+            self.add_ingredients_names()
+            print(self.ingredients)
+            print(len(self.ingredients))
+            print(self.ingredient_names)
+            print(len(self.ingredient_names))
+            print(self.ingredients_dict)
+            self.save_ingredient_amounts_according_to_dict_keys()
+            self.print_what_is_there_now()
+        except Exception as exc:
+            print("Something went wrong with saving ingredient amounts in dict:", exc)
 
     def print_what_is_there_now(self):
         print("Print for checking:\n")
@@ -62,18 +69,27 @@ class RecipeReader():
         return self.ingredients_dict
 
     def save_ingredient_amounts_according_to_dict_keys(self):
-        if self.check_amounts_are_even():
-            beginning = 0
-            list_len = len(self.ingredient_names)
-            for key in self.ingredients_dict:
-                self.ingredients_dict[key] = self.ingredients[beginning:list_len]
-                beginning += len(self.ingredient_names)
-                list_len += len(self.ingredient_names)
+        try:
+            if self.check_amounts_are_even():
+                beginning = 0
+                list_len = len(self.ingredient_names)
+                for key in self.ingredients_dict:
+                    self.ingredients_dict[key] = self.ingredients[beginning:list_len]
+                    beginning += len(self.ingredient_names)
+                    list_len += len(self.ingredient_names)
+        except Exception as exc:
+            print("Something went wrong ")
 
     def check_amounts_are_even(self):
-        if len(self.ingredients) % len(self.ingredients_dict) != 0:
-            raise Exception("""Something has gone wrong after starting to sort ingredients read from file
-            to ingredients dict: amount of ingredients is not even""")
+        #if len(self.ingredients) % len(self.ingredients_dict) != 0:
+        if len(self.ingredient_names) > len(self.ingredients):
+            #how_many_to_remove = len(self.ingredient_names) - len(self.ingredients)
+            self.ingredient_names = self.ingredient_names[:len(self.ingredients)]  #osaan mausteista ei ole laitettu määriä, ja ne on reseptin lopussa
+
+            # raise Exception("""Something has gone wrong after starting to sort ingredients read from file
+            # to ingredients dict: amount of ingredients is not even""")
+        if len(self.ingredient_names) != len(self.ingredients):
+            raise Exception("Korjattava check_amounts_are_even")
         return True
 
     def add_ingredients_names(self):
@@ -85,10 +101,13 @@ class RecipeReader():
 
     def create_ingredients_dict(self):
         """Sets amounts of eaters as keys in self.ingredients_dict and removes them from self.ingredients"""
-        self.set_person_amounts_as_dict_keys()
-        for key in self.ingredients_dict:
-            # remove person amounts from ingredients list
-            self.remove_item_from_ingredients(key)
+        try:
+            self.set_person_amounts_as_dict_keys()
+            for key in self.ingredients_dict:
+                # remove person amounts from ingredients list
+                self.remove_item_from_ingredients(key)
+        except Exception as exc:
+            print("Something went wrong with saving ingredients to dict according to amount of eaters")
 
     def set_person_amounts_as_dict_keys(self):
         for item in self.ingredients:

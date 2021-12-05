@@ -25,7 +25,7 @@ def main():
 
     #TÄSSÄ SE TOIMIVA ENNEN 2.12.
     ingredientanalyser = IngredientAnalyser()
-    ingredientanalyser.save_ingredients("files/Day1.txt")
+    ingredientanalyser.save_ingredients("files/Day2.txt")
 
 
 
