@@ -1,3 +1,5 @@
+from filesplitter.filesplitter import FileSplitter
+
 class RecipeReader():
     """Reads file given at class instance creation, and finds recipe ingredients in it. Saves ingredients in dict.
     Dict format is {amount_of_eaters: [ingredient amount, another ingredient amount,...], amount of eaters: [..]
@@ -9,27 +11,38 @@ class RecipeReader():
         self.ingredients: list[str] = []
         self.ingredients_dict: dict = {}
         self.ingredient_names: list[str] = []
+        self.filesplitter = None
 
     def read(self):
         """Reads recipe file given as argument to class instance
         and saves it as self.recipe"""
         try:
-            with open(self.recipe_file, "r") as file:
-                self.recipe = file.read()
+            self.filesplitter = FileSplitter(self.recipe_file)
+            self.filesplitter.read()
+            # with open(self.recipe_file, "r") as file:
+            #     self.recipe = file.read()
             self.find_ingredients()
         except Exception as exc:
             print("Something went wrong in reading recipe file:", exc)
 
     def find_ingredients(self):
-        self.pick_rows_with_ingredients()
-        self.clean_ingredients_list()
-        self.create_ingredients_dict()
-        self.add_ingredients_to_dict()
+        self.filesplitter.find_ingredients()
+        for list in self.filesplitter.ingredients_lists:
+            self.ingredients = list
+        #self.pick_rows_with_ingredients()
+            self.clean_ingredients_list()
+            self.create_ingredients_dict()
+            self.add_ingredients_to_dict()
 
     def add_ingredients_to_dict(self):
         self.add_ingredients_names()
+        print(self.ingredients)
+        print(len(self.ingredients))
+        print(self.ingredient_names)
+        print(len(self.ingredient_names))
+        print(self.ingredients_dict)
         self.save_ingredient_amounts_according_to_dict_keys()
-        # self.print_what_is_there_now()
+        self.print_what_is_there_now()
 
     def print_what_is_there_now(self):
         print("Print for checking:\n")
@@ -58,15 +71,15 @@ class RecipeReader():
                 list_len += len(self.ingredient_names)
 
     def check_amounts_are_even(self):
-        if len(self.ingredients) % len(self.ingredients_dict) != 0 or len(self.ingredients) / len(self.ingredients_dict) != len(self.ingredient_names):
+        if len(self.ingredients) % len(self.ingredients_dict) != 0:
             raise Exception("""Something has gone wrong after starting to sort ingredients read from file
-            to ingredients dict.""")
+            to ingredients dict: amount of ingredients is not even""")
         return True
 
     def add_ingredients_names(self):
         """Finds and removes ingredient names from self.ingredients and saves them to self.ingredient_names"""
         for item in self.ingredients:
-            if item.lstrip()[0].isalpha():
+            if item.lstrip()[0].isalpha() and item != "pinch":
                 self.ingredient_names.append(item)
                 self.remove_item_from_ingredients(item)
 

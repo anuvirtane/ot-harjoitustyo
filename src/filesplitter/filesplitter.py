@@ -1,5 +1,3 @@
-from recipereader.recipereader import RecipeReader
-
 class FileSplitter():
     """Reads file given at class instance creation,
     and finds recipe ingredients in it, even if there are many recipes. Splits
@@ -10,7 +8,6 @@ class FileSplitter():
         self.recipe: str = ''
         self.ingredients_lists: list [list] = []
         self.all_ingredients_found = False
-        self.recipereader = RecipeReader()
 
     def read(self):
         """Reads recipe file given as argument to class instance
@@ -23,9 +20,13 @@ class FileSplitter():
             print("Something went wrong in reading recipe file:", exc)
 
     def find_ingredients(self):
-        rows = self.recipe.split("\n")
-        while not self.all_ingredients_found:
-            rows = self.pick_rows_with_ingredients(rows)
+        try:
+            rows = self.recipe.split("\n")
+            while not self.all_ingredients_found:
+         
+                rows = self.pick_rows_with_ingredients(rows)
+        except Exception as exc:
+            print("Something went wrong with finding ingredients from the recipe text:", exc)
             
 
     def pick_rows_with_ingredients(self, list_to_check_for_ingredients: list):
@@ -34,7 +35,6 @@ class FileSplitter():
             i = 0
             ingredients_start_row_found = False
             ingredients_end_row_found = False
-
             for i in range(len(rows)-1):
                 if rows[i - 1].lower() == "ingredients":
                     ingredients_start_row = i
@@ -48,8 +48,9 @@ class FileSplitter():
                     # print(f"Before row {i} are ingredients")
                     # print(rows[i])
                 if ingredients_start_row_found and ingredients_end_row_found:
-                    self.save_ingredients_lists(rows[ingredients_start_row:ingredients_end_row])
-                    return rows[ingredients_end_row:]
+                    self.save_ingredients_lists(rows[ingredients_start_row:ingredients_end_row+1])
+                    
+                    return rows[ingredients_end_row+1:]
                 #self.ingredients = rows[ingredients_start_row:ingredients_end_row]
                # print(rows[ingredients_start_row:ingredients_end_row])
                 continue

@@ -17,14 +17,15 @@ def main():
     # window.geometry("300x200+10+10")
 
     # window.mainloop()
-    # recipereader = RecipeReader("files/Day0.txt")
+    # recipereader = RecipeReader("files/Day2.txt")
     # recipereader.read()
-    fs = FileSplitter("files/Day1.txt")
-    fs.read()
+    # fs = FileSplitter("files/Day1.txt")
+    # fs.read()
+
 
     #TÄSSÄ SE TOIMIVA ENNEN 2.12.
-    # ingredientanalyser = IngredientAnalyser()
-    # ingredientanalyser.save_ingredients("files/Day0.txt")
+    ingredientanalyser = IngredientAnalyser()
+    ingredientanalyser.save_ingredients("files/Day1.txt")
 
 
 
