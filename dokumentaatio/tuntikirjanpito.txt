@@ -20,7 +20,10 @@ vk 5:
 5.12.21 1 h säädin niin, että filesplitter, recipereader ja ingredientanalyser toimivat nyt yhdessä day1, day2 tai day3 tiedoston ollessa kyseessä (tarvitsee vielä muuttaa, jotta muutkin toimii).
 5.12.21 1 h day4 lukeminen korjattu. riisireseptin lukeminen estetty, koska sen formaatti on eri kuin muiden (ei toimi). jos ainesosien nimiä on enemmän kuin määriä, ainesosan nimilistan lopusta leikataan (jotkut reseptit eivät kerro vikojen mausteiden ainesmääriä)
 todo: selvitä, mikä day0:ssa ja day5:ssä tökkii.
-6.12.21 2 h luin palautteen labtoolista. sinänsä hyödyllisiä vinkkejä, mutta aika myöhään. googlasin, miten palautetta voisi soveltaa (sisälsi vinkkejä, jotka ei suoraan sellaisenaan sovellettavissa mun tilanteeseen tulkintani mukaan - jouduin tulkisemaan, koska palaute oli sen verran lyhyt). aika myöhäistä muuttaa koko hommaa nyt maanantai-iltana, enkä tiedä, suostunko ollenkaan (ei vältsii irtoo).
+6.12.21 2 h luin palautteen labtoolista. sinänsä hyödyllisiä vinkkejä, mutta aika myöhään. googlasin, miten palautetta voisi soveltaa (sisälsi vinkkejä, jotka ei suoraan sellaisenaan sovellettavissa mun tilanteeseen tulkintani mukaan - jouduin tulkisemaan, koska palaute oli sen verran lyhyt). 
+            aika myöhäistä muuttaa koko hommaa nyt maanantai-iltana, enkä tiedä, suostunko ollenkaan (ei vältsii irtoo).
+            se palaute ois ollu kiva saada aikaisemmin kuin viikolla 5, nyt se aiheutti aika voimakkaan tunnereaktion.
+7.12.21 1 h rämppäsin python-docxilla tiedoston lukemista ja syynäsin python-docxin dokumentaatiota. Poetrylla lisätty python-docx-import kivasti ei anna tarkastella python-docxin koodia editorissa.
  vk 5 yht 6,5 h   
 yht 25 h (vk 1-5)      
-todo: tee koko homma siihen pisteeseen, mihin sen saa python-docxia käyttäen, ja harkitse sen jälkeen kurssin kesken jättämistä uudelleen      
+todo: tee koko homma siihen pisteeseen, mihin sen saa python-docxia käyttäen. tavoite ens viikolle, että sillä sais haettua reseptitaulukot.

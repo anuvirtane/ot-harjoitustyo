@@ -2,6 +2,7 @@ from tkinter import Tk, Button, Label, Entry
 from ingredientanalyser.ingredientanalyser import IngredientAnalyser
 from recipereader.recipereader import RecipeReader
 from filesplitter.filesplitter import FileSplitter
+from docx import Document
 
 
 def main():
@@ -22,11 +23,21 @@ def main():
     # fs = FileSplitter("files/Day1.txt")
     # fs.read()
 
+    # TÄSSÄ SE TOIMIVA ENNEN 2.12.
+    # ingredientanalyser = IngredientAnalyser()
+    # ingredientanalyser.save_ingredients("files/Day2.txt")
 
-    #TÄSSÄ SE TOIMIVA ENNEN 2.12.
-    ingredientanalyser = IngredientAnalyser()
-    ingredientanalyser.save_ingredients("files/Day2.txt")
-
+   
+    document = Document('files/Day 3 ENG Jan 20.docx')
+    for index, table in enumerate(document.tables):
+        print("Table", index)
+        for row in range(len(table.rows)):
+            for col in range(len(table.columns)):
+                if table.cell(row, col).text == "Ingredients\n\t":
+                    print("JOO")
+                print(table.cell(row, col).text, end='\t')
+            print()
+        print()
 
 
 if __name__ == '__main__':

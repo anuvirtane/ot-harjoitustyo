@@ -1,9 +1,13 @@
 from filesplitter.filesplitter import FileSplitter
 
+
 class RecipeReader():
-    """Reads file given at class instance creation, and finds recipe ingredients in it. Saves ingredients in dict.
-    Dict format is {amount_of_eaters: [ingredient amount, another ingredient amount,...], amount of eaters: [..]
-    Ingredient amounts in dict lists are in same order as items in self.ingredient_names list}"""
+    """Reads file given at class instance creation, 
+    and finds recipe ingredients in it. Saves ingredients in dict.
+    Dict format is {amount_of_eaters: [ingredient amount, 
+    another ingredient amount,...], amount of eaters: [..]
+    Ingredient amounts in dict lists are in 
+    same order as items in self.ingredient_names list}"""
 
     def __init__(self, recipe_file: str = "files/Day0.txt"):
         self.recipe_file = recipe_file
@@ -28,13 +32,13 @@ class RecipeReader():
     def find_ingredients(self):
         try:
             self.filesplitter.find_ingredients()
-            for list in self.filesplitter.ingredients_lists:
-                self.ingredients = list
-            #self.pick_rows_with_ingredients()
+            for item in self.filesplitter.ingredients_lists:
+                self.ingredients = item
+            # self.pick_rows_with_ingredients()
                 self.clean_ingredients_list()
                 self.create_ingredients_dict()
                 self.add_ingredients_to_dict()
-                
+
         except Exception as exc:
             print("Something went wrong in finding ingredients from recipe text:", exc)
 
@@ -78,13 +82,15 @@ class RecipeReader():
                     beginning += len(self.ingredient_names)
                     list_len += len(self.ingredient_names)
         except Exception as exc:
-            print("Something went wrong ")
+            print("Something went wrong sacinv ingredient amounts in dict:", exc)
 
     def check_amounts_are_even(self):
-        #if len(self.ingredients) % len(self.ingredients_dict) != 0:
+        # if len(self.ingredients) % len(self.ingredients_dict) != 0:
         if len(self.ingredient_names) > len(self.ingredients):
             #how_many_to_remove = len(self.ingredient_names) - len(self.ingredients)
-            self.ingredient_names = self.ingredient_names[:len(self.ingredients)]  #osaan mausteista ei ole laitettu määriä, ja ne on reseptin lopussa
+            # osaan mausteista ei ole laitettu määriä, ja ne on reseptin lopussa
+            self.ingredient_names = self.ingredient_names[:len(
+                self.ingredients)]
 
             # raise Exception("""Something has gone wrong after starting to sort ingredients read from file
             # to ingredients dict: amount of ingredients is not even""")
@@ -100,33 +106,37 @@ class RecipeReader():
                 self.remove_item_from_ingredients(item)
 
     def create_ingredients_dict(self):
-        """Sets amounts of eaters as keys in self.ingredients_dict and removes them from self.ingredients"""
+        """Sets amounts of eaters as keys in self.ingredients_dict
+        and removes them from self.ingredients"""
         try:
             self.set_person_amounts_as_dict_keys()
             for key in self.ingredients_dict:
                 # remove person amounts from ingredients list
                 self.remove_item_from_ingredients(key)
         except Exception as exc:
-            print("Something went wrong with saving ingredients to dict according to amount of eaters")
+            print(
+                """Something went wrong with saving ingredients
+                to dict according to amount of eaters:""", exc)
 
     def set_person_amounts_as_dict_keys(self):
         for item in self.ingredients:
             if item[-2:].lower() == " p":  # person amounts are listed as e. g. '10 p'
                 self.ingredients_dict[item] = []
         if len(self.ingredients_dict) == 0:
-            raise Exception('''Unable to find person amounts from ingredients list. 
+            raise Exception('''Unable to find person amounts from ingredients list.
             The program assumes person amounts to be listed as "10 p" or such so that
             there is a number, a space and then a letter p''')
 
     def remove_item_from_ingredients(self, item_to_be_removed: str):
-        """Removes values from self.ingredients that have been already put to their place elsewhere"""
-        ingr_list = [item for item in self.ingredients]
+        """Removes values from self.ingredients that 
+        have been already put to their place elsewhere"""
+        ingr_list = list(self.ingredients)
         ingr_list.remove(item_to_be_removed)
-        self.ingredients = [item for item in ingr_list]
+        self.ingredients = list(ingr_list)
 
     def clean_ingredients_list(self):
         self.ingredients = [item.replace(
-            '\t', '') for item in self.ingredients if item != '' and item != '\t']
+            '\t', '') for item in self.ingredients if item not in ('', '\\t')]
 
     def pick_rows_with_ingredients(self):
         """Finds place where ingredients list begins and ends from self.recipe and saves that part as self.ingredients list"""

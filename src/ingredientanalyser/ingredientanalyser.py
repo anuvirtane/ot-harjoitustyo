@@ -34,7 +34,8 @@ class IngredientAnalyser:
                     ingr['amount'] += amount
                 else:
                     print("Could not add", ingredient, amount, unit, "to",
-                          ingr['ingredient'], ingr['amount'], ingr['unit'], "because unit did not match")
+                          ingr['ingredient'], ingr['amount'], ingr['unit'],
+                          "because unit did not match")
 
     def ingredient_already_added(self, ingredient: str) -> bool:
         for item in self.ingredients:

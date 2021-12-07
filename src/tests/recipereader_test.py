@@ -7,6 +7,6 @@ class TestRecipeReader(unittest.TestCase):
         print("Set up goes here")
 
     def test_recipereader_reads_bad_recipe_file(self):
-        rr = recipereader.RecipeReader("files/dingdong.txt")
-        rr.read()
-        self.assertEqual(rr.recipe, "ding\ndong\nbom")
+        r_r = recipereader.RecipeReader("files/dingdong.txt")
+        r_r.read()
+        self.assertEqual(r_r.recipe, "ding\ndong\nbom")
