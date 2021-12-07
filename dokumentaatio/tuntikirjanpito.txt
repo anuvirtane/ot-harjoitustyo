@@ -24,6 +24,6 @@ todo: selvitä, mikä day0:ssa ja day5:ssä tökkii.
             aika myöhäistä muuttaa koko hommaa nyt maanantai-iltana, enkä tiedä, suostunko ollenkaan (ei vältsii irtoo).
             se palaute ois ollu kiva saada aikaisemmin kuin viikolla 5, nyt se aiheutti aika voimakkaan tunnereaktion.
 7.12.21 1 h rämppäsin python-docxilla tiedoston lukemista ja syynäsin python-docxin dokumentaatiota. Poetrylla lisätty python-docx-import kivasti ei anna tarkastella python-docxin koodia editorissa.
- vk 5 yht 6,5 h   
-yht 25 h (vk 1-5)      
+ vk 5 yht 7,5 h   
+yht 26 h (vk 1-5)      
 todo: tee koko homma siihen pisteeseen, mihin sen saa python-docxia käyttäen. tavoite ens viikolle, että sillä sais haettua reseptitaulukot.
