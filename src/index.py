@@ -26,18 +26,21 @@ def main():
     # TÄSSÄ SE TOIMIVA ENNEN 2.12.
     # ingredientanalyser = IngredientAnalyser()
     # ingredientanalyser.save_ingredients("files/Day2.txt")
+    recipereader = RecipeReader('files/Day 1 ENG Jan 20.docx')
+    recipereader.read()
+    # document = Document('files/Day 0 ENG Jan 20.docx')
+   
+    # for index, table in enumerate(document.tables[1:]):
+    #     for row in range(len(table.rows)):
+    #         for col in range(len(table.columns)):
+    #                 # if "Ingredients" in table.cell(row, col).text:
+    #             print(table.cell(row, col).text, end='\t')
+    #         print()
+    #     print()
+
 
    
-    document = Document('files/Day 3 ENG Jan 20.docx')
-    for index, table in enumerate(document.tables):
-        print("Table", index)
-        for row in range(len(table.rows)):
-            for col in range(len(table.columns)):
-                if table.cell(row, col).text == "Ingredients\n\t":
-                    print("JOO")
-                print(table.cell(row, col).text, end='\t')
-            print()
-        print()
+    
 
 
 if __name__ == '__main__':

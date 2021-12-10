@@ -26,4 +26,5 @@ todo: selvitä, mikä day0:ssa ja day5:ssä tökkii.
 7.12.21 1 h rämppäsin python-docxilla tiedoston lukemista ja syynäsin python-docxin dokumentaatiota. Poetrylla lisätty python-docx-import kivasti ei anna tarkastella python-docxin koodia editorissa.
  vk 5 yht 7,5 h   
 yht 26 h (vk 1-5)      
-todo: tee koko homma siihen pisteeseen, mihin sen saa python-docxia käyttäen. tavoite ens viikolle, että sillä sais haettua reseptitaulukot.
+vk 6:
+10.12.21 1 h tein uuden recipereaderin alun. käyttää python-doxcia. hakee ainekset ja määrät kymmenelle reseptistä.
