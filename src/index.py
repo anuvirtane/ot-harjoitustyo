@@ -1,7 +1,6 @@
-from tkinter import Tk, Button, Label, Entry
+# from tkinter import Tk, Button, Label, Entry
 from ordermaker.ordermaker import OrderMaker
 from recipereader.recipereader import RecipeReader
-
 from docx import Document
 
 
@@ -29,9 +28,9 @@ def main():
         recipereader.read()
         ingr_list = recipereader.get_ingredients_list()
         ordermaker.add_ingredients(ingr_list)
-    
+
     ordermaker.print()
-    
+
 
 if __name__ == '__main__':
     main()
