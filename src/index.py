@@ -1,7 +1,7 @@
 from tkinter import Tk, Button, Label, Entry
-from ingredientanalyser.ingredientanalyser import IngredientAnalyser
+from ordermaker.ordermaker import OrderMaker
 from recipereader.recipereader import RecipeReader
-from filesplitter.filesplitter import FileSplitter
+
 from docx import Document
 
 
@@ -18,11 +18,20 @@ def main():
     # window.geometry("300x200+10+10")
 
     # window.mainloop()
-   
+    print("This is a temporary text based user interface without error handling")
+    print("For how many people do you wish to make a food order? (type an integer and press enter)")
+    answer = int(input())
+    print('\nThanks, here is a simple list\n')
+    ordermaker = OrderMaker(answer)
+    for i in range(0, 11):
 
-    recipereader = RecipeReader('files/Day 0 ENG Jan 20.docx')
-    recipereader.read()
-    recipereader.print()
+        recipereader = RecipeReader(f'files/Day {i} ENG Jan 20.docx')
+        recipereader.read()
+        ingr_list = recipereader.get_ingredients_list()
+        ordermaker.add_ingredients(ingr_list)
+    
+    ordermaker.print()
+    
 
 if __name__ == '__main__':
     main()

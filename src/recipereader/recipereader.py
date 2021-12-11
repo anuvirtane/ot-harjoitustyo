@@ -65,7 +65,7 @@ class RecipeReader():
         """Converts units to l, kg etc"""
         if unit.lower().strip() == 'ml':
             unit = 'l'
-            amount = amount / 100
+            amount = amount / 1000
         if unit.lower().strip() == 'dl':
             unit = 'l'
             amount = amount / 10
@@ -77,7 +77,7 @@ class RecipeReader():
             amount = 50
         if unit.lower().strip() == 'g':
             unit = 'kg'
-            amount = amount / 100
+            amount = amount / 1000
         return amount, unit
         
     def add_to_existing_ingredient(self, ingredient: str, amount: float, unit: str):
