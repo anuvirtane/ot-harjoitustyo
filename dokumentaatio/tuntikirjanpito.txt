@@ -32,3 +32,6 @@ vk 6:
 11.12.21 1 h  poistin vanhan recipereaderin, ingredientanalyserin ja filesplitterin. kaikki, mitä ne teki, mahtui uuteen recipereaderiin :D aloitin ordermakerin
 11.12.21 1 h ordermaker laskee ruokamäärät sen perusteella, mitä alustavalta tekstikäyttöliittymältä pyydetään ja tulostaa ne.
 11.12.21 1  h   arkkitehtuuri.md:n aloitus, käyttöohjeen aloitus, testit uusiks
+11.12.21 1 h release, koodin siivous, release uudelleen, code review-kohteen kurkistus
+vk 6 yht 7 h
+yht 32 h (vk 1-6)
