@@ -30,24 +30,20 @@ Graphical user interface will be added later and will include functions to:
 
  **user can give a file/files with recipes and amount of people attending the course, and get four files with food order amounts**
 
- - program (class RecipeReader) *simple version done during week 3.* 
+ - program (class RecipeReader) *improved version done during week 6.* 
     - reads file/files with recipes
     - finds the part of recipe where ingredients are
-    - saves what amount of people ingredients are given for in dict (usually 10, 90, 100 and 110 people) so that dict keys are people amounts
-    - saves ingredient names in a list (in the order in which they appear in recipe)
-    - saves ingredient amounts in lists that are saved as dict values so that the value for dict key "10 eaters" is a list of ingredient amounts
-    - ingredient name is in the same list index place as ingredient amount in each dict
-
-
-- program (class IngredientAnalyser) *simple version done during week 4.*
-
-    - gets dict with ingredient amounts and list with ingredient names when initiated
     - checks ingredient units and converts them if necessary (eg. l to kg)
-    - saves amounts to a list with dicts in it. Dict format: {"ingredient": ingredient, "amount": amount, "unit": unit}
+    - saves ingredients in dicts and dicts in list. Dict format: {"ingredient": ingredient, "amount": amount, "unit": unit}
+    *ALL DONE*
 
-- program (class OrderGenerator)
-    - gets list with dicts {ingredient: amount} in it when initiated
-    - knows which ingredient goes to which order file and puts them there
+- program (class OrderMaker) *half-done during week 6*
+    - saves ingredient dicts in a list, and adds same ingredient amount to that ingredient *done*
+    - calculates correct amounts according to how many people user asks amounts for *done*
+    - knows which ingredient goes to which order file and puts them there *todo*
+
+- program has graphical user interface *todo*
+    - user gives amount of eaters
 
 
 ### What would be really nice to have as well

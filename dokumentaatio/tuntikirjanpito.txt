@@ -31,3 +31,4 @@ vk 6:
 11.12.21 2 h recipereader osaa lukea kaikki reseptit yksi kerrallaan kokeiltuna.
 11.12.21 1 h  poistin vanhan recipereaderin, ingredientanalyserin ja filesplitterin. kaikki, mitä ne teki, mahtui uuteen recipereaderiin :D aloitin ordermakerin
 11.12.21 1 h ordermaker laskee ruokamäärät sen perusteella, mitä alustavalta tekstikäyttöliittymältä pyydetään ja tulostaa ne.
+11.12.21 0,5  h   arkkitehtuuri.md:n aloitus
