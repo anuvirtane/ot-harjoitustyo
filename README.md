@@ -16,6 +16,8 @@ Tämä sovellus on tehty ja testattu pythonin versiolla ``3.8``.
 
 -[Sovellusarkkitehtuuri](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
 
+-[Käyttöohje](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/dokumentaatio/use_instructions.md)
+
 ## Lataus
 
 Lataa uusin [release (listan ylin)](https://github.com/anuvirtane/ot-harjoitustyo/releases)
