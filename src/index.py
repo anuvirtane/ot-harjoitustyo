@@ -18,31 +18,11 @@ def main():
     # window.geometry("300x200+10+10")
 
     # window.mainloop()
-    # recipereader = RecipeReader("files/Day2.txt")
-    # recipereader.read()
-    # fs = FileSplitter("files/Day1.txt")
-    # fs.read()
+   
 
-    # TÄSSÄ SE TOIMIVA ENNEN 2.12.
-    # ingredientanalyser = IngredientAnalyser()
-    # ingredientanalyser.save_ingredients("files/Day2.txt")
-    recipereader = RecipeReader('files/Day 4 ENG Jan 20.docx')
+    recipereader = RecipeReader('files/Day 0 ENG Jan 20.docx')
     recipereader.read()
     recipereader.print()
-    # document = Document('files/Day 0 ENG Jan 20.docx')
-   
-    # for index, table in enumerate(document.tables[1:]):
-    #     for row in range(len(table.rows)):
-    #         for col in range(len(table.columns)):
-    #                 # if "Ingredients" in table.cell(row, col).text:
-    #             print(table.cell(row, col).text, end='\t')
-    #         print()
-    #     print()
-
-
-   
-    
-
 
 if __name__ == '__main__':
     main()

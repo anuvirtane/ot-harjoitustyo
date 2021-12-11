@@ -28,3 +28,5 @@ todo: selvitä, mikä day0:ssa ja day5:ssä tökkii.
 yht 26 h (vk 1-5)      
 vk 6:
 10.12.21 1 h tein uuden recipereaderin alun. käyttää python-doxcia. hakee ainekset ja määrät kymmenelle reseptistä.
+11.12.21 2 h recipereader osaa lukea kaikki reseptit yksi kerrallaan kokeiltuna.
+11.12.21 1 h  poistin vanhan recipereaderin, ingredientanalyserin ja filesplitterin. kaikki, mitä ne teki, mahtui uuteen recipereaderiin :D aloitin ordermakerin

@@ -2,11 +2,10 @@ from docx import Document
 
 class RecipeReader():
     """Reads file given at class instance creation, 
-    and finds recipe ingredients in it. Saves ingredients in dict.
-    Dict format is {amount_of_eaters: [ingredient amount, 
-    another ingredient amount,...], amount of eaters: [..]
-    Ingredient amounts in dict lists are in 
-    same order as items in self.ingredient_names list}"""
+    and finds recipe ingredients in it. Saves ingredients in list withs dicts in it,
+    self.ingredients_list. Format of dicts in self.ingredients_list is e. g.
+    {'ingredient': 'Salt', 'amount': 10, 'unit': 'g'}
+   """
     def __init__(self, recipe_file: str = "files/Day0.txt"):
         self.recipe_file = recipe_file
         self.ingredients_list: list [dict] = []
@@ -36,10 +35,6 @@ class RecipeReader():
         if len(ingredients_names) < len(ingredient_amounts_for_ten):
             ingredient_amounts_for_ten = ingredient_amounts_for_ten[:len(ingredients_names)]
         for i in range(0, len(ingredient_amounts_for_ten)):
-            print(ingredient_amounts_for_ten)
-            print(ingredients_names)
-            print(ingredient_amounts_for_ten[i])
-            print(ingredients_names[i])
             if ingredient_amounts_for_ten[i].strip() != 'pinch' and ingredient_amounts_for_ten[i] != '':
                 if ingredients_names[i].lower().strip() != 'water' and ingredients_names[i] != '' and ingredients_names[i].lower().strip() != "broth (cpeas cooking water)":
                     if not self.ingredient_already_in_ingredients_list(ingredients_names[i]):
@@ -53,7 +48,7 @@ class RecipeReader():
 
     def ingredient_already_in_ingredients_list(self, ingredient: str) -> bool:
         for item in self.ingredients_list:
-            if item['ingredient'].lower() == ingredient.lower():
+            if item['ingredient'].lower().strip() == ingredient.lower().strip():
                 return True
         return False
 
@@ -64,8 +59,27 @@ class RecipeReader():
             amount_and_unit[0] = amount_and_unit[0][2:]
         amount: float = float(amount_and_unit[0].replace(",", "."))
         unit: str = amount_and_unit[1]
-        return amount, unit
+        return self.convert_units(amount, unit)
 
+    def convert_units(self, amount: float, unit: str)-> tuple:
+        """Converts units to l, kg etc"""
+        if unit.lower().strip() == 'ml':
+            unit = 'l'
+            amount = amount / 100
+        if unit.lower().strip() == 'dl':
+            unit = 'l'
+            amount = amount / 10
+        if unit.lower().strip() == 'tsp':
+            unit = 'g'
+            amount = 50
+        if unit.lower().strip() == 'tbsp':
+            unit = 'g'
+            amount = 50
+        if unit.lower().strip() == 'g':
+            unit = 'kg'
+            amount = amount / 100
+        return amount, unit
+        
     def add_to_existing_ingredient(self, ingredient: str, amount: float, unit: str):
         for ingr in self.ingredients_list:
             if ingr['ingredient'].lower() == ingredient.lower():
@@ -76,7 +90,8 @@ class RecipeReader():
                           ingr['ingredient'], ingr['amount'], ingr['unit'],
                           "because unit did not match")
 
-    def print(self):
-        print(self.ingredients_list)
+    def get_ingredients_list(self):
+        return self.ingredients_list
 
-      
+ 
+           
