@@ -16,6 +16,10 @@ Tämä sovellus on tehty ja testattu pythonin versiolla ``3.8``.
 
 -[Sovellusarkkitehtuuri](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
 
+## Lataus
+
+Lataa uusin [release (listan ylin)](https://github.com/anuvirtane/ot-harjoitustyo/releases)
+
 ## Asennus
 
 Asenna riippuvuudet komennolla:
