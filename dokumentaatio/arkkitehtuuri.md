@@ -13,5 +13,5 @@ At the moment there is a temporary text user interface. There will be a graphica
 ## Application logic
 Application logic consists of classes [RecipeReader](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/src/recipereader/recipereader.py) and [OrderMaker](https://github.com/anuvirtane/ot-harjoitustyo/blob/main/src/ordermaker/ordermaker.py)
 
-![Classes](https://github.com/anuvirtane/ot-harjoitustyo/tree/main/files/classes.jpg)
+![Classes](../files/classes.jpg)
 
