@@ -26,8 +26,9 @@ def main():
     # TÄSSÄ SE TOIMIVA ENNEN 2.12.
     # ingredientanalyser = IngredientAnalyser()
     # ingredientanalyser.save_ingredients("files/Day2.txt")
-    recipereader = RecipeReader('files/Day 1 ENG Jan 20.docx')
+    recipereader = RecipeReader('files/Day 4 ENG Jan 20.docx')
     recipereader.read()
+    recipereader.print()
     # document = Document('files/Day 0 ENG Jan 20.docx')
    
     # for index, table in enumerate(document.tables[1:]):
