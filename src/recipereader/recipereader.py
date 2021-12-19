@@ -2,7 +2,7 @@ from docx import Document
 
 
 class RecipeReader():
-    """Reads file given at class instance creation, 
+    """Reads file given at class instance creation,
     and finds recipe ingredients in it. Saves ingredients in list withs dicts in it,
     self.ingredients_list. Format of dicts in self.ingredients_list is e. g.
     {'ingredient': 'Salt', 'amount': 10, 'unit': 'g'}
@@ -44,7 +44,7 @@ class RecipeReader():
                 ingredients_names)]
         for i in range(0, len(ingredient_amounts_for_ten)):
             if ingredient_amounts_for_ten[i].strip() != 'pinch'\
-                 and ingredient_amounts_for_ten[i] != '':
+                    and ingredient_amounts_for_ten[i] != '':
                 if ingredients_names[i].lower().strip() != 'water' \
                     and ingredients_names[i] != '' \
                         and ingredients_names[i].lower().strip() != "broth (cpeas cooking water)":
@@ -56,7 +56,7 @@ class RecipeReader():
                         self.ingredients_list.append(ingr_dict)
                     else:
                         if ingredient_amounts_for_ten[i].strip() != 'pinch'\
-                             and ingredient_amounts_for_ten[i] != '':
+                                and ingredient_amounts_for_ten[i] != '':
                             amount, unit = self.split_ingredient_amounts_and_units(
                                 ingredient_amounts_for_ten[i])
                             self.add_to_existing_ingredient(

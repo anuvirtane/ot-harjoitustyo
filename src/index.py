@@ -1,7 +1,7 @@
 # from tkinter import Tk, Button, Label, Entry
+from docx import Document
 from ordermaker.ordermaker import OrderMaker
 from recipereader.recipereader import RecipeReader
-from docx import Document
 
 
 def main():
@@ -31,7 +31,6 @@ def main():
 
     ordermaker.print()
     ordermaker.make_order_files()
-    
 
 
 if __name__ == '__main__':
