@@ -30,6 +30,8 @@ def main():
         ordermaker.add_ingredients(ingr_list)
 
     ordermaker.print()
+    ordermaker.make_order_files()
+    
 
 
 if __name__ == '__main__':
