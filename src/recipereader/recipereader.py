@@ -28,13 +28,12 @@ class RecipeReader():
                             list_from_table.append(table.cell(row, col).text)
                 self.save_ingredients_for_ten(list_from_table)
         except Exception as exc:
-            raise TypeError(
-                "Something went wrong in finding ingredients from recipe text:", exc)
+            raise TypeError(exc) from exc
 
     def save_ingredients_for_ten(self, list_from_table: list):
         """Chooses parts from table where ingredient n
         ames and amounts for 10 people are. Saves them in dict, e. g.
-        {'ingredient': 'Salt', 'amount': 10, 'unit': 'g'} 
+        {'ingredient': 'Salt', 'amount': 10, 'unit': 'g'}
         and saves dicts in ingredients_list or if ingredient
         already exists in ingredients_list, adds to amount of existing ingredient"""
         ingredients_names = list_from_table[4].split("\n")
