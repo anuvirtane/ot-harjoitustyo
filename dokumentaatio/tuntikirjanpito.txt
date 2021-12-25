@@ -40,6 +40,6 @@ vk 7:
 21.12. 1 h gui:n aloitus
 25.12. 2 h gui loppuun, Logic-luokka ja lint-pisteiden viilaaminen
 25.12. 1 h dokumentaation päivittäminen
-25.12. 1 h uniikki tiedostopolku luotaville tiedostoille
-vk 7 yht 7
-yht 39 h (vk 1-7)
+25.12. 2 h uniikki tiedostopolku luotaville tiedostoille, loput testit
+vk 7 yht 8
+yht 40 h (vk 1-7)
