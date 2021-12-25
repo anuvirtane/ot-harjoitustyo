@@ -14,10 +14,10 @@ class Logic:
         class and eleven instances of RecipeReader
         class. Passes ingredients read by recipereaders to
         ordermaker. Returns order file locations made by ordermaker."""  
-        ordermaker = OrderMaker(self.eaters)
+        self.ordermaker = OrderMaker(self.eaters)
         for i in range(0, 11):
             recipereader = RecipeReader(f'files/Day {i} ENG Jan 20.docx')
             recipereader.read()
             ingr_list = recipereader.get_ingredients_list()
-            ordermaker.add_ingredients(ingr_list)
-        return ordermaker.make_order_files()
+            self.ordermaker.add_ingredients(ingr_list)
+        return self.ordermaker.make_order_files()

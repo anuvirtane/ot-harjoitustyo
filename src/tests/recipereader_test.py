@@ -10,3 +10,9 @@ class TestRecipeReader(unittest.TestCase):
         r_r = recipereader.RecipeReader(f'files/Day 0 ENG Jan 20.docx')
         r_r.read()
         self.assertEqual(len(r_r.ingredients_list), 10)
+
+    def test_recipereader_reads_bad_file(self):
+        r_r = recipereader.RecipeReader(f'files/classes.jpg')
+        with self.assertRaises(TypeError):
+            r_r.read()
+        

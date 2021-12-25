@@ -14,7 +14,7 @@ class RecipeReader():
 
     def read(self):
         """Reads recipe file given as argument to class instance and
-        gets gets recipe tables from it"""
+        gets recipe tables from it"""
         try:
 
             document = Document(self.recipe_file)

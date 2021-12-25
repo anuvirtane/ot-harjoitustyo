@@ -18,6 +18,11 @@ class TestLogic(unittest.TestCase):
         self.assertTrue(path.exists(folderpath+'/asia_order.txt'))
         self.assertTrue(path.exists(folderpath+'/lidl_order.txt'))
         self.assertTrue(path.exists(folderpath+'/wholesaler_order.txt'))
+
+    def test_logic(self):
+        logic2 = logic.Logic(2)
+        logic2.generate_order_based_on_recipes()
+        self.assertEqual(len(logic2.ordermaker.ingredients), 84)
         
 
         
