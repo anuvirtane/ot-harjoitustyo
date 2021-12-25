@@ -2,6 +2,7 @@ from os import path, makedirs
 from os.path import expanduser
 from datetime import datetime
 
+
 class OrderMaker:
     """Has ingredients to be ordered in self.ingredients
     list with dicts in it. Saves ingredients to it when given a list of the same format.
@@ -27,8 +28,8 @@ class OrderMaker:
         if not path.exists(f'{self.folderpath_for_order_files}/{order_folder}'):
             makedirs(f'{self.folderpath_for_order_files}/{order_folder}')
         self.folderpath_for_order_files = f'{self.folderpath_for_order_files}/{order_folder}'
-    
-    def get_time_now(self)-> str:
+
+    def get_time_now(self) -> str:
         now = datetime.now()
         return now.strftime("%d_%m_%Y_%H:%M:%S")
 
