@@ -1,5 +1,6 @@
+from os import path, makedirs
 from os.path import expanduser
-
+from datetime import datetime
 
 class OrderMaker:
     """Has ingredients to be ordered in self.ingredients
@@ -19,6 +20,17 @@ class OrderMaker:
         self.lidl_ingredients = ["Soy milk", "Oat milk",
                                  "Coconut flakes", "Quinoa", "Raisins"]
         self.folderpath_for_order_files = folderpath_for_order_files
+        self.generate_order_folder()
+
+    def generate_order_folder(self):
+        order_folder: str = f'order{self.get_time_now()}'
+        if not path.exists(f'{self.folderpath_for_order_files}/{order_folder}'):
+            makedirs(f'{self.folderpath_for_order_files}/{order_folder}')
+        self.folderpath_for_order_files = f'{self.folderpath_for_order_files}/{order_folder}'
+    
+    def get_time_now(self)-> str:
+        now = datetime.now()
+        return now.strftime("%d_%m_%Y_%H:%M:%S")
 
     def add_ingredients(self, ingredients_list: list):
         '''Ingredients come in amounts calculated for ten.
