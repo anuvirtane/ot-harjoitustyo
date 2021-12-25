@@ -12,15 +12,10 @@ There is only one user role for the application.
 
 ## User interface
 
-At early phases: a text based user interface.
+Graphical user interface with functions to:
 
-Graphical user interface will be added later and will include functions to:
-
-- give location of text file with recipes to be read
 - give amount of people on the course to calculate food amounts
-- give location of text file with leftover food amounts from previous course (if it has been saved)
-- get and save the generated files with food order amounts to user's computer
-- get the food order files from previous courses 
+- show location of order files generated
 
 
 ## Functionality in basic version
@@ -30,20 +25,25 @@ Graphical user interface will be added later and will include functions to:
 
  **user can give a file/files with recipes and amount of people attending the course, and get four files with food order amounts**
 
- - program (class RecipeReader) *improved version done during week 6.* 
+ - program (class RecipeReader) *done*
     - reads file/files with recipes
     - finds the part of recipe where ingredients are
     - checks ingredient units and converts them if necessary (eg. l to kg)
     - saves ingredients in dicts and dicts in list. Dict format: {"ingredient": ingredient, "amount": amount, "unit": unit}
-    *ALL DONE*
 
-- program (class OrderMaker) *half-done during week 6*
+- program (class OrderMaker) *done*
     - saves ingredient dicts in a list, and adds same ingredient amount to that ingredient *done*
     - calculates correct amounts according to how many people user asks amounts for *done*
     - knows which ingredient goes to which order file and puts them there *todo*
 
-- program has graphical user interface *todo*
+- program locig (class Logic) *done*
+    - coordinates use of RecipeReader and OrderMaker class instances
+    - returns location of order files generated
+
+
+- program has graphical user interface *done*
     - user gives amount of eaters
+    - user gets location of food order files generated
 
 
 ### What would be really nice to have as well

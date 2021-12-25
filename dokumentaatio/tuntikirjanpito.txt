@@ -39,5 +39,6 @@ vk 7:
 19.12. 2 h koodikatselmoinnista saamani palautteen soveltaminen sopivissa määrin (en katsonut kaikkia suosituksia sopiviksi soveltaa tässä kontekstissa, vaikka olivatkin hyviä huomioita), ordermakeriin ainesosien jakaminen tiedostoihin
 21.12. 1 h gui:n aloitus
 25.12. 2 h gui loppuun, Logic-luokka ja lint-pisteiden viilaaminen
-vk 7 yht 5 
-yht 37 h (vk 1-7)
+25.12. 1 h dokumentaation päivittäminen
+vk 7 yht 6 
+yht 38 h (vk 1-7)

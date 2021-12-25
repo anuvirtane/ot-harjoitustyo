@@ -1,6 +1,6 @@
 # Ruokatilauksen laskija 
 
-Tämä sovellus auttaa säätämään ruokatilauksen määrät kymmenille ihmisille, jotka asuvat n. 11 päivää meditaatiokurssilla. Ohjelma lukee reseptit tekstitiedostosta, etsii relevanteista resepteistä ruokamäärät ja säätää ne annetulle ihmismäärälle. Laskemansa ruokamäärät ohjelma tallentaa neljään eri tiedostoon, koska ruoka-aineet tilataan kolmesta eri paikasta kahtena eri toimitusajankohtana (käytännön syistä ja taloudellisista syistä).
+Tämä sovellus auttaa säätämään ruokatilauksen määrät kymmenille ihmisille, jotka asuvat n. 11 päivää meditaatiokurssilla. Ohjelma lukee reseptit tekstitiedostosta, etsii relevanteista resepteistä ruokamäärät ja säätää ne annetulle ihmismäärälle. Laskemansa ruokamäärät ohjelma tallentaa kolmeen eri tiedostoon, koska ruoka-aineet tilataan kolmesta eri paikasta kahtena eri toimitusajankohtana (käytännön syistä ja taloudellisista syistä).
 
 Tämä ohjelma sekä vastaa tosielämän automaatiotarpeeseen että toimii [HY:n Ohjelmistotekniikka-kurssin](https://ohjelmistotekniikka-hy.github.io/) harjoitustyönä. 
 
